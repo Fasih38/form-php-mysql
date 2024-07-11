@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Submission</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid red;
+        padding: 10px;
+      }
+      body {
+        background-color: rgb(155, 255, 68);
+        color: red;
+      }
+      .container {
+        width: 400px;
+        margin: 50px auto;
+      }
+      .btn {
+        padding: 5px;
+        background-color: red;
+        color: rgb(155, 255, 68);
+        text-decoration: none;
+        border: none;
+      }
+      input[type="text"] {
+        border: 2px solid red;
+        border-radius: 4px;
+      }
+      input[type="email"] {
+        border: 2px solid red;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="submit.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+        <label for="country">Country</label>
+        <select name="country" id="country" name="country">
+          <option value="Pakistan">Pakistan</option>
+          <option value="India">India</option>
+          <option value="Uk">Uk</option></select
+        ><br /><br />
+        <label for="gender">Gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="Male" required />
+        <label for="female">Female</label>
+        <input
+          type="radio"
+          name="gender"
+          id="female"
+          value="Female"
+          required
+        /><br /><br />
+        <input type="submit" value="Submit" class="btn" />
+        <br /><br />
+      </form>
+      <br />
+      <a href="view.php" class="btn">View Data</a>
+    </div>
+  </body>
+</html>
