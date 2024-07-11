@@ -78,15 +78,16 @@ border: none;
         <input type="email" id="email" name="email" value="<?php echo $row['email']; ?>" required><br><br>
         <label for="country">Country</label>
       <select name="country" id="country" name="country">
-        <option value="Pakistan">Pakistan</option>
-        <option value="India">India</option>
-        <option value="Uk">Uk</option></select
-      ><br /><br />
+        <option value="Pakistan" <?php if($row['country'] == 'Pakistan'){  echo 'selected'; } ?>>Pakistan</option>
+        <option value="India"  <?php if($row['country'] == 'India'){  echo 'selected'; } ?>>India</option>
+        <option value="Uk"  <?php if($row['country'] == 'Uk'){  echo 'selected'; } ?>>Uk</option>
+        </select>
+        <br/><br/>
       <label for="gender">Gender:</label>
       <label for="male">Male</label>
-      <input type="radio" name="gender" id="male" value="Male" required />
+      <input type="radio" <?php if($row['gender'] == 'Male'){  echo 'checked'; } ?> name="gender" id="male" value="Male" required />
       <label for="female">Female</label>
-      <input
+      <input <?php if($row['gender'] == 'Female'){  echo 'checked'; } ?>
         type="radio"
         name="gender"
         id="female"
