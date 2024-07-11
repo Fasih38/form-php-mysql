@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "form2";
+$dbname = "formdata3";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, name, email,country,gender FROM data";
+$sql = "SELECT * FROM data";
 $result = $conn->query($sql);
 ?>
 
@@ -31,7 +31,7 @@ $result = $conn->query($sql);
                     color:red;
         }
         .container{
-            width: 400px;
+            width: 1000px;
             margin: 50px auto;
         }
         .btn{
@@ -47,6 +47,7 @@ text-decoration: none;
     <table border="1" style='border-collapse: collapse;'>
         <tr>
             <!-- <th>ID</th> -->
+             <th>Image</th>
             <th>Name</th>
             <th>Email</th>
             <th>Country</th>
@@ -58,6 +59,7 @@ text-decoration: none;
             foreach ($result as $key => $row) { 
                 echo "<tr>";
                 // echo "<td>" . $row["id"] . "</td>";
+                echo "<td>". "<img src='uploads/".$row['filename']."' width='auto' height='150'>". "</td>";
                 echo "<td>" . $row["name"] . "</td>";
                 echo "<td>" . $row["email"] . "</td>";
                 echo "<td>" . $row["country"] . "</td>";

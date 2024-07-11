@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "form2";
+$dbname = "formdata3";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -94,6 +94,7 @@ border: none;
         value="Female"
         required
       /><br /><br />
+      
         <input type="submit" name="update" value="Update" class='btn'>
     </form>
     </br>

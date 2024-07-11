@@ -1,8 +1,9 @@
 <?php
+
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "form2";
+$dbname = "formdata3";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -17,7 +18,8 @@ id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(30) NOT NULL,
 email VARCHAR(50),
 country VARCHAR(30) NOT NULL,
-gender VARCHAR(30) NOT NULL
+gender VARCHAR(30) NOT NULL,
+filename VARCHAR(30) NOT NULL
 -- reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
