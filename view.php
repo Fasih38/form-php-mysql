@@ -55,24 +55,6 @@ text-decoration: none;
         </tr>
         <?php
         if ($result->num_rows > 0) {
-          
-
-            
-            // while($row = $result->fetch_assoc()) {
-            //     echo "<tr>";
-            //     echo "<td>" . $row["id"] . "</td>";
-            //     echo "<td>" . $row["name"] . "</td>";
-            //     echo "<td>" . $row["email"] . "</td>";
-            //     echo "<td>" . $row["country"] . "</td>";
-            //     echo "<td>" . $row["gender"] . "</td>";
-            //     echo "<td>
-            //             <a class='btn' href='update.php?id=" . $row["id"] . "'>Update</a> |
-            //             <a class='btn' href='delete.php?id=" . $row["id"] . "'>Delete</a>
-            //           </td>";
-            //     echo "</tr>";
-            // }
-
-            // new
             foreach ($result as $key => $row) { 
                 echo "<tr>";
                 // echo "<td>" . $row["id"] . "</td>";
