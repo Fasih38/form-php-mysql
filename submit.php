@@ -72,7 +72,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $country=$_POST['country'];
 $gender=$_POST['gender'];
-$filename = htmlspecialchars( basename( $_FILES["fileToUpload"]["name"]));
+// $filename = htmlspecialchars( basename( $_FILES["fileToUpload"]["name"]));
 $filename =  $_FILES["fileToUpload"]["name"];
 
 // $sql = "INSERT INTO data (`name`, `email`,`country`,`gender`,`filename`) VALUES ('$name', '$email','$country','$gender','$filename')";
