@@ -31,14 +31,18 @@ $result = $conn->query($sql);
                     color:red;
         }
         .container{
-            width: 1000px;
+            width: 700px;
             margin: 50px auto;
         }
         .btn{
-padding: 5px;
-background-color: red;
-color: rgb(155, 255, 68);
-text-decoration: none;
+       padding: 5px;
+       background-color: red;
+       color: rgb(155, 255, 68);
+       text-decoration: none;
+        }
+        .btn-margin{
+            display : inline-block;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -65,7 +69,7 @@ text-decoration: none;
                 echo "<td>" . $row["country"] . "</td>";
                 echo "<td>" . $row["gender"] . "</td>";
                 echo "<td>
-                        <a class='btn' href='update.php?id=" . $row["id"] . "'>Update</a> |
+                        <a class='btn btn-margin' href='update.php?id=" . $row["id"] . "'>Update</a> 
                         <a class='btn' href='delete.php?id=" . $row["id"] . "'>Delete</a>
                       </td>";
                 echo "</tr>";
